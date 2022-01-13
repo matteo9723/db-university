@@ -1,4 +1,12 @@
 1)SELECT * FROM `students` JOIN `degrees` ON `students`.`degree_id`=`degrees`.`id` WHERE `degrees`.`name`='Corso di Laurea in Economia' 
 2)SELECT * FROM `degrees` JOIN `departments` ON `degrees`.`department_id`=`departments`.`id` WHERE `departments`.`name`='Dipartimento di Neuroscienze' 
 3)SELECT * FROM `courses` JOIN `course_teacher` ON `courses`.`id`=`course_teacher`.`course_id` WHERE `course_teacher`.`teacher_id`=44 
-4)
+4)SELECT `students`.`name` , `students`.`surname` , `students`.`registration_number` , `degrees`.`name` , `departments`.`name`
+FROM `students`
+JOIN `degrees`
+ON `students`.`degree_id` = `degrees`.`id`
+JOIN `departments`
+ON `degrees`.`department_id` = `departments`.`id`
+ORDER BY `students`.`surname` , `students`.`name`
+5)SELECT * FROM `degrees` JOIN `courses` ON `degrees`.`id` = `courses`.`degree_id` JOIN `course_teacher` ON `course_teacher`.`course_id` = `courses`.`id` 
+6)
