@@ -6,3 +6,13 @@
 6) SELECT COUNT(id) FROM `degrees` WHERE `level` = 'magistrale' 
 7) SELECT COUNT(id) FROM `departments` 
 8) SELECT * FROM `teachers` WHERE `phone` IS NULL 
+
+
+group by
+
+1) SELECT COUNT (id) AS `numero_iscritti`,
+YEAR (`enrolment_date`) AS `anno`
+FROM `students
+GROUP BY
+2)SELECT COUNT (*) AS`n_insegnanti`,`office_address
+FROM `teachers`
